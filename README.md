@@ -9,28 +9,28 @@ The gettingcleandataproject repository contains the files required to complete t
 ### The assigment was based upon data generated from the Human Activity Recognition Using Smartphones study provided by the University of California - Irvine Machine Learning Repository. 
 
 ### The assignment consisted of:
-* Downloading and uzipping the file located at https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+* Downloading and unzipping the file located at https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 * creating a test dataset and train dataset from the unzipped files
 
 * merging the test and train datasets into one complete dataset.
 
-* extracting only the variables cotaining mean() and std()
+* extracting only the variables containing mean() and std()
 
-* updating the extraced dataset to contain activity descriptions instead of activity numbers
+* updating the extracted dataset to contain activity descriptions instead of activity numbers
 
 * output to csv file the generated tidy datasets
 
 * Utilize Github to publish the project
 
 ### The R code is fully documented, but here are some highlights contained in the code:
-* utilized read.table() to import the data files.  Since these were not csv files, it required the use of sep="" and not sep=" " to properly read in the data.
-* once the data was read in it was checked for NA's and validated against UCI website for correct number of observatins.
+* utilized read.table() to import the data files.  Since these were not CSV files, it required the use of sep="" and not sep=" " to properly read in the data.
+* once the data was read in it was checked for NA's and validated against UCI website for correct number of observations.
 * the imported datasets then required updating their column names from the generic V to appropriate values
-* the imported datasets were then combined, merged, and ordered into one complete datset
+* the imported datasets were then combined, merged, and ordered into one complete dataset
 * the columns containing the variables mean() and std() were extracted using the grep command
-* at this point, it was required to remove all special characters from the column names
-* the appropriate mean and std columns were mereged into one dataset
-* next step was to convert the activity numbers (1-6) into activity descriptions (Walking, Walking Upstairs, Walking Downstairs, Sitting, Standing, and Laying) and update the column name
-* once this tidy data set was complete, needed to generate another tidy dataset that contained the values of averages for each variable by subject and activity description. This was done by using the melt() and dcast() functions in R.
-* the write.table() was used to export the tidy datasets in csv format with the .txt extension in order to properly upload to the coursera.org website.
+* removed all special characters from the column names
+* the appropriate mean and std columns were merged into one dataset
+* convert the activity numbers (1-6) into activity descriptions (Walking, Walking Upstairs, Walking Downstairs, Sitting, Standing, and Laying) and update the column name
+* generate another tidy dataset that contained the values of averages for each variable by subject and activity description. This was done by using the melt() and dcast() functions in R.
+* the write.table() was used to export the tidy datasets in CSV format with the .txt extension in order to properly upload to the coursera.org website.
